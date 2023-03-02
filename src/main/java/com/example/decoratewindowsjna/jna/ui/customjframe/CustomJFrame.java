@@ -1,13 +1,13 @@
 // Copyright 2020 Kalkidan Betre Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
-package com.example.decoratewindowsjna.ui.customjframe;
+package com.example.decoratewindowsjna.jna.ui.customjframe;
 
-import com.example.decoratewindowsjna.ui.customdecoration.CustomDecorationParameters;
+import com.example.decoratewindowsjna.jna.ui.customdecoration.CustomDecorationParameters;
 
-import com.example.decoratewindowsjna.ui.theme.Theme;
-import com.example.decoratewindowsjna.ui.usercontrols.ButtonType;
-import com.example.decoratewindowsjna.ui.usercontrols.ControlBoxJButton;
-import com.example.decoratewindowsjna.ui.customdecoration.CustomDecorationWindowProc;
-import com.example.decoratewindowsjna.ui.usercontrols.IconJPanel;
+import com.example.decoratewindowsjna.jna.ui.theme.Theme;
+import com.example.decoratewindowsjna.jna.ui.usercontrols.ButtonType;
+import com.example.decoratewindowsjna.jna.ui.usercontrols.ControlBoxJButton;
+import com.example.decoratewindowsjna.jna.ui.customdecoration.CustomDecorationWindowProc;
+import com.example.decoratewindowsjna.jna.ui.usercontrols.IconJPanel;
 import com.sun.jna.Native;
 import com.sun.jna.platform.win32.WinDef;
 

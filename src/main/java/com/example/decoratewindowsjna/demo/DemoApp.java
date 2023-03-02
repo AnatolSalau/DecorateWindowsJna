@@ -3,10 +3,14 @@ package com.example.decoratewindowsjna.demo;
 
 
 
-import com.example.decoratewindowsjna.ui.customjframe.CustomJFrame;
-import com.example.decoratewindowsjna.ui.customjframe.WindowFrameType;
-import com.example.decoratewindowsjna.ui.theme.DarkTheme;
-import com.example.decoratewindowsjna.ui.theme.Theme;
+import com.example.decoratewindowsjna.jna.ui.customjframe.CustomJFrame;
+import com.example.decoratewindowsjna.jna.ui.customjframe.WindowFrameType;
+import com.example.decoratewindowsjna.jna.ui.theme.DarkTheme;
+import com.example.decoratewindowsjna.jna.ui.theme.Theme;
+import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.Scene;
+import javafx.scene.web.WebView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +34,17 @@ public class DemoApp {
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
 
-            //JMenuBar jMenuBar = new JMenuBar();
+            JFXPanel jfxPanel = new JFXPanel();
+            frame.add(jfxPanel);
+
+            Platform.runLater(() -> {
+               WebView webView = new WebView();
+               jfxPanel.setScene(new Scene(webView));
+               webView.getEngine().load("http://www.stackoverflow.com/");
+            });
+
+
+            JMenuBar jMenuBar = new JMenuBar();
             JMenu fileMenu = new JMenu("File");
             JMenu editMenu = new JMenu("Edit");
             JMenu viewMenu = new JMenu("View");
@@ -46,12 +60,12 @@ public class DemoApp {
             JMenuItem toolsMenu = new JMenuItem("Tools");
             viewMenu.add(toolsMenu);
 
-/*            jMenuBar.add(fileMenu);
+            jMenuBar.add(fileMenu);
             jMenuBar.add(editMenu);
             jMenuBar.add(viewMenu);
-            frame.addUserControlsToTitleBar(jMenuBar);*/
+            frame.addUserControlsToTitleBar(jMenuBar);
 
-            ImageIcon imageIcon = new ImageIcon("resources/appicon.png");
+            ImageIcon imageIcon = new ImageIcon("erythrocytes.png");
             frame.setIcon(imageIcon.getImage());
 
             frame.addJFrameCloseEventAdapter(new MouseAdapter() {

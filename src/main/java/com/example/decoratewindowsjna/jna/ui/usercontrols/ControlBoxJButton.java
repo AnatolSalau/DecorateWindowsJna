@@ -1,7 +1,7 @@
 // Copyright 2020 Kalkidan Betre Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
-package com.example.decoratewindowsjna.ui.usercontrols;
+package com.example.decoratewindowsjna.jna.ui.usercontrols;
 
-import com.example.decoratewindowsjna.ui.theme.Theme;
+import com.example.decoratewindowsjna.jna.ui.theme.Theme;
 
 import javax.swing.*;
 import java.awt.*;
